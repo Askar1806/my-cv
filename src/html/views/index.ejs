@@ -1,7 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%= require('../partials/head.ejs')({ title: 'Главная' }) %>
+  <%= require('../partials/head.ejs')({ title: 'Резюме' }) %>
   <body>
-    <%= require('../partials/header.ejs')() %>
+    <button class="burger">
+      <span class="stick"></span>
+      <span class="stick"></span>
+      <span class="stick"></span>
+      <span class="stick"></span>
+    </button>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a
+                data-translate="home-link"
+                class="header__nav-link"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a
+                data-translate="about-link"
+                class="header__nav-link"
+                href="#about-me"
+                >About&nbsp;me</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a
+                data-translate="skills-link"
+                class="header__nav-link"
+                href="#skills"
+                >Skills</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a
+                data-translate="portfolio-link"
+                class="header__nav-link"
+                href="#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a
+                data-translate="contacts-link"
+                class="header__nav-link"
+                href="#contacts"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+          <div class="language-switcher header__switcher">
+            <button
+              data-lng="ru"
+              class="language-switcher__btn header__switcher-btn"
+            >
+              RU
+            </button>
+            <button
+              data-lng="en"
+              class="language-switcher__btn header__switcher-btn"
+            >
+              ENG
+            </button>
+          </div>
+        </nav>
+        <hr class="header__hr" />
+      </div>
+    </header>
+    <main class="main">
+      <section class="about-info">
+        <div class="container">
+          <div class="about-info__wrapper">
+            <h1 data-translate="fullname" class="about-info__name">
+              Askar<br />Khannanov
+            </h1>
+            <p data-translate="my-info" class="about-info__info">
+              Front-end Developer<br />28 years old, Saint Petersburg
+            </p>
+            <div class="language-switcher about-info__switcher">
+              <button data-lng="en" class="language-switcher__btn">ENG</button>
+              <button data-lng="ru" class="language-switcher__btn">RU</button>
+            </div>
+          </div>
+          <picture>
+            <source
+              media="(max-width: 578px)"
+              srcset="<%= require('@images/askar-khannanov-sm.jpg') %>"
+            />
+            <img
+              class="about-info__photo"
+              src="<%= require('@images/askar-khannanov.jpg') %>"
+              alt="Askar Khannanov"
+            />
+          </picture>
+        </div>
+        <button class="about-info__burger-btn">
+          <span class="about-info__burger-line"></span>
+          <span class="about-info__burger-line"></span>
+          <span class="about-info__burger-line"></span>
+        </button>
+      </section>
+      <section class="about-me" id="about-me">
+        <div class="container">
+          <h2 data-translate="about-me-title" class="about-me__title title">
+            About me
+          </h2>
+          <div class="about-me__wrapper">
+            <p data-translate="about-me1" class="about-me__content">
+              Hi, I'm Askar – Front-end Developer from Ufa, living in Saint
+              Petersburg. I'm interested in creating new projects and bringing
+              them to perfection.
+            </p>
+            <p data-translate="about-me2" class="about-me__content">
+              I took courses as a Front-end Developer at Skillbox.
+            </p>
+            <p data-translate="about-me3" class="about-me__content">
+              Have 8 months of experience as a Front-end developer.
+            </p>
+            <p data-translate="about-me4" class="about-me__content">
+              Ready to implement excellent projects with wonderful people.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="skills" id="skills">
+        <div class="container">
+          <h2 data-translate="skills-title" class="skills__title title">
+            Skills
+          </h2>
+          <p data-translate="skills-subtitle" class="skills__subtitle">
+            I&nbsp;work with&nbsp;such languages and libraries&nbsp;as
+          </p>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <img
+                class="skills__item-img"
+                src="<%= require('@icons/html-css.svg') %>"
+                alt="Photoshop"
+              />
+              <p class="skills__item-name">HTML & CSS</p>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__item-img"
+                src="<%= require('@icons/js.svg') %>"
+                alt="After Effects"
+              />
+              <p class="skills__item-name">JavaScript</p>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__item-img"
+                src="<%= require('@icons/typescript.svg') %>"
+                alt="After Effects"
+              />
+              <p class="skills__item-name">Typescript</p>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__item-img"
+                src="<%= require('@icons/react.svg') %>"
+                alt="After Effects"
+              />
+              <p class="skills__item-name">React</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h2 data-translate="portfolio-title" class="portfolio__title title">
+            Portfolio
+          </h2>
+          <ul class="portfolio__list">
+            <li class="portfolio__list-item">
+              <img
+                src="<%= require('@images/bringold.jpg') %>"
+                alt="Bringold"
+                class="portfolio__img"
+              />
+              <a
+                target="_blank"
+                href="https://bringold.io/"
+                class="portfolio__link"
+                >Bringold - Homepage</a
+              >
+            </li>
+            <li class="portfolio__list-item">
+              <img
+                src="<%= require('@images/bringold-herokuapp.jpg') %>"
+                alt="Bringold herokuapp"
+                class="portfolio__img"
+              />
+              <a
+                target="_blank"
+                href="https://bringold-stage-panel.herokuapp.com/auth/sign-in"
+                class="portfolio__link"
+                >Bringold Herokuapp</a
+              >
+            </li>
+            <li class="portfolio__list-item">
+              <img
+                src="<%= require('@images/kolibri.jpg') %>"
+                alt="Kolibri"
+                class="portfolio__img"
+              />
+              <a
+                target="_blank"
+                href="https://ufa-kolibri.com/"
+                class="portfolio__link"
+                data-translate="project-link"
+                >Photo designer Kolibri</a
+              >
+            </li>
+          </ul>
+          <p data-translate="portfolio-text" class="portfolio__text">Also my personal projects via <strong><a href="#github">Github</a></strong>.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <h2 data-translate="footer-title" class="footer__title title">
+          Contacts
+        </h2>
+        <p data-translate="footer-subtitle" class="footer__subtitle">
+          Want to know more and contact me?<br />You can do it per e-mail,
+          Telegram and<br />
+          see my projects on Github!
+        </p>
+        <button class="footer__button button">
+          <a
+            data-translate="footer-mail"
+            href="mailto:askar.khannanov@gmail.com"
+            >Send e-mail</a
+          >
+        </button>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a
+              href="https://t.me/khaskar95"
+              class="footer__link"
+              target="_blank"
+              title="Telegram"
+              ><img src="<%= require('@icons/telegram.svg') %>" alt="telegram"
+            /></a>
+          </li>
+          <li class="footer__list-item">
+            <a
+              href="https://github.com/Askar1806"
+              class="footer__link"
+              id="github"
+              target="_blank"
+              title="Github"
+              ><img src="<%= require('@icons/github.svg') %>" alt="github"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,28 @@
+.footer {
+  padding: 6.5rem 0 7rem;
+  text-align: center;
+
+  @include smBreakpoint() {
+    padding: 80px 0 80px;
+  }
+
+  &__title {
+    margin-bottom: 1.1rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.7rem;
+    font-size: 20px;
+  }
+
+  &__button {
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: calc(max(2vw, 60px));
+    margin-bottom: 2.5rem;
+  }
+}

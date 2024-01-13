@@ -47,7 +47,7 @@ module.exports = {
       patterns: [{ from: Path.resolve(__dirname, "../public"), to: "public" }],
     }),
     // new FaviconsWebpackPlugin(
-    //   Path.resolve(__dirname, "../src/assets/images/icons/icon.svg")
+    //   Path.resolve(__dirname, "../src/assets/icons/icon.svg")
     // ),
     new Dotenv(),
   ].concat(htmlPlugins),
@@ -57,7 +57,7 @@ module.exports = {
       "@node_modules": Path.resolve(__dirname, "../node_modules"),
       "@assets": Path.resolve(__dirname, "../src/assets"),
       "@images": Path.resolve(__dirname, "../src/assets/images"),
-      "@icons": Path.resolve(__dirname, "../src/assets/images/icons"),
+      "@icons": Path.resolve(__dirname, "../src/assets/icons"),
       "@styles": Path.resolve(__dirname, "../src/styles"),
       "@scripts": Path.resolve(__dirname, "../src/scripts"),
     },

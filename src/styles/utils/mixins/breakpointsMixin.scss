@@ -1,0 +1,17 @@
+@mixin lgBreakpoint {
+    @media (max-width: $lg) {
+        @content;
+    }
+}
+
+@mixin mdBreakpoint {
+    @media (max-width: $md) {
+        @content;
+    }
+}
+
+@mixin smBreakpoint {
+    @media (max-width: $sm) {
+        @content;
+    }
+}

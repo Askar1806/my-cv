@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100&family=Montserrat:wght@500;700&display=swap");
+@import "normalize.css/normalize";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+
+  @include smBreakpoint() {
+    font-size: 16px;
+  }
+}
+
+$primary-color: $cod-gray;
+$primary-line-height: 1.22;
+$primary-font-size: 1rem;
+$primary-font-family: $montserrat;
+$primary-font-weight: 500;
+
+body {
+  font-size: $primary-font-size;
+  font-weight: $primary-font-weight;
+  line-height: $primary-line-height;
+  color: $primary-color;
+  font-family: $primary-font-family;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  border: none;
+  min-height: 1px;
+  background-color: $gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

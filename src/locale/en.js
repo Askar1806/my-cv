@@ -1,0 +1,23 @@
+export default {
+  "home-link": "Home",
+  "about-link": "About&nbsp;me",
+  "skills-link": "Skills",
+  "portfolio-link": "Portfolio",
+  "contacts-link": "Contacts",
+  "fullname": "Askar<br />Khannanov",
+  "my-info": "Front-end Developer<br />28 years old, Saint Petersburg",
+  "about-me-title": "About me",
+  "about-me1":
+    "Hi, I'm Askar – Front-end Developer from Ufa, living in Saint Petersburg. I'm interested in creating new projects and bringing them to perfection.",
+  "about-me2": "I took courses as a Front-end Developer at Skillbox.",
+  "about-me3": "Have 8 months of experience as a Front-end developer.",
+  "about-me4": "Ready to implement excellent projects with wonderful people.",
+  "skills-title": "Skills",
+  "skills-subtitle": "I&nbsp;work with&nbsp;such languages and libraries&nbsp;as",
+  "portfolio-title": "Portfolio",
+  "project-link": "Photo designer Kolibri",
+  "portfolio-text": 'Also my personal projects via <strong><a href="#github">Github</a></strong>.',
+  "footer-title": "Contacts",
+  "footer-subtitle": "Want to know more and contact me?<br />You can do it per e-mail, Telegram and<br /> see my projects on Github!",
+  "footer-mail": "Send e-mail",
+};

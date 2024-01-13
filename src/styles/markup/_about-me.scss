@@ -1,0 +1,25 @@
+.about-me {
+    background-color: $wild-sand;
+    padding: 120px 0 105px;
+
+    @include smBreakpoint() {
+        padding: 80px 0 75px;
+      }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__content:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}

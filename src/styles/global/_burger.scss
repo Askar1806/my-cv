@@ -1,0 +1,55 @@
+.burger {
+  all: unset;
+  display: none;
+  width: 33px;
+  height: 19px;
+  flex-direction: column;
+  gap: 4px;
+  position: fixed;
+  top: 9vh;
+  right: $container-padding;
+  z-index: 1001;
+  cursor: pointer;
+
+  @include smBreakpoint {
+    display: flex;
+  }
+}
+
+.stick {
+  display: block;
+  height: 3px;
+  background-color: $cod-gray;
+  width: 100%;
+  background-color: $black;
+  position: absolute;
+  left: 0;
+  transition: 0.3s all linear;
+}
+
+.stick:first-child {
+  top: 0;
+}
+
+.stick:nth-child(2),
+.stick:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stick:nth-child(4) {
+  bottom: 0;
+}
+
+.burger_active .stick:nth-child(1),
+.burger_active .stick:nth-child(4) {
+  opacity: 0;
+}
+
+.burger_active .stick:nth-child(2) {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger_active .stick:nth-child(3) {
+  transform: translateY(-50%) rotate(-45deg);
+}

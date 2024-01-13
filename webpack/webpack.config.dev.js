@@ -28,11 +28,6 @@ module.exports = merge(common, {
         emitError: true,
         files: Path.resolve(__dirname, "../src"),
       }),
-    STYLE_LINT_USE &&
-      new StylelintPlugin({
-        files: Path.join("src", "**/*.s?(a|c)ss"),
-        emitError: true,
-      }),
   ].filter(Boolean),
   module: {
     rules: [

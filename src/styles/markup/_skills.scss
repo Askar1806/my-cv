@@ -1,0 +1,45 @@
+.skills {
+  padding: 90px 0 110px;
+
+  @include smBreakpoint() {
+    padding: 80px 0 100px;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 4.5rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    @include smBreakpoint() {
+      flex-direction: column;
+      gap: 80px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    justify-items: center;
+    align-items: center; 
+
+    &-img {
+      margin-bottom: 23px;
+    }
+
+    &-name {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 0.8rem;
+      color: $gray;
+    }
+  }
+}

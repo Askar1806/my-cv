@@ -1,0 +1,15 @@
+.button {
+  background-color: $cod-gray;
+  color: $white;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 13px 30px;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $cod-gray;
+    background-color: transparent;
+    color: $cod-gray;
+  }
+}

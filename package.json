@@ -1,5 +1,5 @@
 {
-  "name": "webpack-starter",
+  "name": "askar-cv",
   "version": "1.0.0",
   "scripts": {
     "lint": "npm run lint:styles; npm run lint:scripts",
@@ -63,6 +63,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "core-js": "^3.28.0",
+    "normalize.css": "^8.0.1",
     "swiper": "^9.0.5"
   }
 }

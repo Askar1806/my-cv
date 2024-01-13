@@ -1,0 +1,32 @@
+.portfolio {
+  background-color: $wild-sand;
+  padding: 6.3rem 0 5.3rem;
+
+  @include smBreakpoint() {
+    padding: 80px 0 90px;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__list-item {
+    margin-bottom: 5.5rem;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  &__text {
+    font-size: 22px;
+    text-align: center;
+  }
+}

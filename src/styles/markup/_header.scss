@@ -1,0 +1,75 @@
+.header {
+  @include smBreakpoint {
+    transform: translateY(-100%);
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: $white;
+    padding-top: 9vh;
+    transition: transform 1s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+
+  &__nav {
+    &-link {
+      color: $gray;
+      font-weight: 700;
+
+      @include smBreakpoint {
+        font-size: 34px;
+      }
+
+      &:hover {
+        color: $cod-gray;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+
+    @include smBreakpoint {
+      flex-direction: column;
+      padding: 0;
+      gap: 8vh;
+    }
+  }
+
+  &__switcher {
+    display: none;
+
+    @include smBreakpoint {
+      display: flex;
+      position: absolute;
+      z-index: 1001;
+      right: $container-padding;
+      bottom: 22vh;
+      transform: rotate(90deg) translateX(100%);
+      transform-origin: right top;
+
+      &-btn {
+        font-size: 34px;
+      }
+    }
+  }
+
+  &__hr {
+    border: none;
+    height: 1px;
+    background-color: $gray;
+
+    @include smBreakpoint {
+      display: none;
+    }
+  }
+}

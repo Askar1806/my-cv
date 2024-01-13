@@ -1,0 +1,46 @@
+.about-info {
+  padding: 40px 0 105px;
+
+  @include smBreakpoint() {
+    padding: 65px 0 83px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+
+    @include smBreakpoint() {
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__name {
+    font-size: 2.5rem;
+
+    @include smBreakpoint() {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__info {
+    transform: translateY(-20%);
+  }
+
+  &__photo {
+    width: 100%;
+  }
+
+  &__switcher {
+    transform: translateY(-400%);
+    transform-origin: right bottom;
+
+    @include smBreakpoint {
+      display: none;
+    }
+  }
+}
